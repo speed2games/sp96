@@ -24,8 +24,22 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                 font-family: 'logging';
                 src: url('fonts/LiberationMono-Regular.ttf');
             }
+
+            body {
+                background-image: url('Untitled.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                margin: 0;
+                padding: 20px;
+            }
+
             #console {
                 font-family: 'logging';
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 10px;
+                border-radius: 8px;
             }
         </style>
     </head>
@@ -36,74 +50,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         Jika keluar notifikasi error, tekan tombol PS (home), restart PS4 lalu coba lagi.<br>
         <pre id='console'></pre>
     </body>
-	<script>
-	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-	function load_mainmenu(){
-	var link = document.createElement('a');
-	document.body.appendChild(link);
-	link.href = '../index.html';
-	link.click();
-	}
-	</script>
+    <script>
+        if (window.applicationCache.status == '0') {
+            window.location.replace("cache.html");
+        }
+        function load_mainmenu() {
+            var link = document.createElement('a');
+            document.body.appendChild(link);
+            link.href = '../index.html';
+            link.click();
+        }
+    </script>
     <script src="./payload.js"></script>
     <script type='module' src='./alert.mjs'></script>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>SPEEDGAMES</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: url('Untitled.png'); /* تأكد أن الصورة باسم Untitled.png وموجودة بنفس المجلد */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-
-    .glow {
-      font-size: 50px;
-      font-weight: bold;
-      text-shadow: 0 0 10px #ffffffaa, 0 0 20px #ffffff77;
-      margin-bottom: 20px;
-    }
-
-    .phone {
-      font-size: 24px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 8px #ffffff66;
-    }
-
-    .instagram {
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-shadow: 0 0 8px #ffffff44;
-    }
-
-    .instagram img {
-      width: 24px;
-      height: 24px;
-      filter: brightness(1.2);
-    }
-  </style>
-</head>
-<body>
-  <div class="glow">SPEEDGAMES</div>
-  <div class="phone">07721086762</div>
-  <div class="instagram">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    <span>speed2games</span>
-  </div>
-</body>
 </html>
